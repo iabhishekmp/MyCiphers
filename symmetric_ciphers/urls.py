@@ -15,6 +15,4 @@ urlpatterns = [
     path('/stream_cipher/hill/hill_exi', views.hill_exicute, name='hill_exicute'),
     path('/stream_cipher/playfair', views.playfair, name='playfair'),
     path('/stream_cipher/playfair/playfair_exi', views.playfair_exicute, name='playfair_exicute'),
-
-
 ]
