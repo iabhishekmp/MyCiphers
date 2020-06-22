@@ -25,7 +25,7 @@ SECRET_KEY = '5in91s0(&zikm98bg%sqc)(swe+o80#-0bho#1y@b-bc-cd)w7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://myciphers.herokuapp.com/', ]
+ALLOWED_HOSTS = ['myciphers.herokuapp.com', ]
 
 
 # Application definition
