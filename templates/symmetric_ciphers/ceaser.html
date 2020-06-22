@@ -126,30 +126,18 @@
         do_this();
     });
 
-    slider.addEventListener('mousemove', function() {
-        key.value = slider.value;
-        do_this();
-    });
-    slider.addEventListener('touchmove', function() {
-        key.value = slider.value;
-        do_this();
-    });
-    slider.addEventListener('keyup', function() {
-        key.value = slider.value;
-        do_this();
-    });
-    slider.addEventListener('click', function() {
-        key.value = slider.value;
-        do_this();
-    });
-    key.addEventListener('keyup', function() {
-        slider.value = key.value;
-        do_this();
-    });
-    key.addEventListener('click', function() {
-        slider.value = key.value;
-        do_this();
-    });
+    ['mousemove', 'touchmove', 'touchend', 'keyup', 'click'].forEach(evt =>
+        slider.addEventListener(evt, function() {
+            key.value = slider.value;
+            do_this();
+        }));
+
+    ['keyup', 'click'].forEach(evt =>
+        key.addEventListener(evt, function() {
+            slider.value = key.value;
+            do_this();
+        }));
+
     enc.addEventListener('click', function() {
         do_this();
     });
